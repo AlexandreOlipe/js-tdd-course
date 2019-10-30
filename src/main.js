@@ -1,12 +1,9 @@
+const fizzbuzz = (numero) => {
+  if ((numero % 3 === 0) && (numero % 5 === 0)) return 'FizzBuzz';
+  if (numero % 3 === 0) return 'Fizz';
+  if (numero % 5 === 0) return 'Buzz';
 
-const sum = (a, b) => a + b;
-const sub = (a, b) => a - b;
-const mult = (a, b) => a * b;
-const div = (a, b) => ((b === 0) ? 'não é possível dividir por zero!' : a / b);
-
-export {
-  sum,
-  sub,
-  mult,
-  div,
+  return numero;
 };
+
+export default fizzbuzz;
