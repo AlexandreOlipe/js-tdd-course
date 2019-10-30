@@ -1,29 +1,34 @@
-describe('Main', function(){
-  before(()=>{
-    console.log('before');
-  });
+var expect = require('chai').expect;
 
-  after(()=>{
-    console.log('after');
-  });
+var calc = require('../src/main.js');
 
-  beforeEach(()=>{
-    console.log('before each');
-  });
+describe('Calc', () => {
 
-  afterEach(()=>{
-    console.log('after each');
-  });
+  // Smoke tests
+  describe('Smoke tests', () => {
 
-  it('teste 1', () => {
-    console.log('test 1');
-  });
+    it('should exist the calc lib', () => {
+      expect(calc).to.exist;
+    });
 
-  it('teste 2', () => {
-    console.log('test 2');
-  });
+    it('should exist the method \'sum\'', () => {
+      expect(calc.sum).to.exist;
+      expect(calc.sum).to.be.a('function');
+    })
 
-  it('teste 3', () => {
-    console.log('test 3');
-  });
+    it('should exist the method \'sub\'', () => {
+      expect(calc.sub).to.exist;
+      expect(calc.sub).to.be.a('function');
+    })
+
+    it('should exist the method \'mult\'', () => {
+      expect(calc.mult).to.exist;
+      expect(calc.mult).to.be.a('function');
+    })
+
+    it('should exist the method \'div\'', () => {
+      expect(calc.div).to.exist;
+      expect(calc.div).to.be.a('function');
+    })
+  })
 });
