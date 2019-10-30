@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha test/**/*.spec.js",
+    "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register",
     "test:tdd": "npm run test -- --watch"
   },
   "repository": {
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/AlexandreOlipe/js-tdd-course#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
